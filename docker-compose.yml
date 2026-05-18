@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    container_name: drophawk-app
+    ports:
+      - "8088:8088"
+    environment:
+      DROPHAWK_CONFIG_PATH: /app/config/config.yaml
+      DROPHAWK_DATA_DIR: /app/data
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config:ro
+    restart: unless-stopped

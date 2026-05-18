@@ -1,0 +1,30 @@
+app:
+  name: DropHawk
+  environment: local
+
+database:
+  path: data/drophawk.sqlite3
+
+scoring:
+  threshold: 60
+  weights:
+    length_lte_4: 50
+    length_5: 30
+    length_6: 15
+    pure_letters: 20
+    has_number: -10
+    has_hyphen: -20
+    tld_com: 20
+    tld_net: 5
+    high_value_root: 25
+    watchlist: 100
+    pronounceable: 10
+
+rdap:
+  qps: 8
+  registered_cache_days: 7
+
+scheduler:
+  daily_drop_cron: "0 2 * * *"
+  backup_cron: "0 4 * * *"
+
