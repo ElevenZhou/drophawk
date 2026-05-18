@@ -17,7 +17,10 @@ DropHawk v1 采用单进程模型:
 | --- | --- |
 | `app/main.py` | FastAPI 应用入口、生命周期初始化、`/healthz` |
 | `app/config.py` | 读取环境变量与 `config/config.yaml`,生成运行配置 |
+| `app/domain.py` | 域名规范化、TLD 校验、基础特征提取 |
+| `app/scoring.py` | 按 PRD 权重计算候选域名分数与命中规则 |
 | `app/db.py` | SQLite 初始化、基础连接上下文 |
+| `app/feishu/cards.py` | 生成飞书交互卡片 JSON,不负责真实发送 |
 | `app/scheduler.py` | 定时任务占位,后续 M1-B/M2 填充 |
 
 ## 数据库
@@ -37,6 +40,6 @@ M1-A 初始化两张基础表:
 ## 待填充
 
 - 三类来源的数据流实现;
-- 评分、RDAP 核查、飞书推送与多维表格写入;
+- RDAP 核查、飞书真实推送与多维表格写入;
 - 配置热加载;
 - 失败重试、限流与运行日志。

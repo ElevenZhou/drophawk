@@ -24,5 +24,6 @@
 
 - Web 控制台路由;
 - 候选列表、字典、watchlist、规则设置 API;
+- 飞书 Webhook 发送接口与 dry-run 验证入口;
 - Basic Auth 接入;
 - 速率限制。

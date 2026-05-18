@@ -4,6 +4,7 @@
 
 ## 2026-05-15
 
+- M1-B:新增域名规范化、PRD 评分规则实现、飞书交互卡片 JSON 渲染与对应测试;暂不发送真实 webhook。
 - M1-A:建立 Python/FastAPI 项目骨架、SQLite 初始化、`/healthz` 健康检查、Docker/Compose 入口、基础测试。
 - 项目命名为 **DropHawk**(鹰隼);Slogan: *See the drop. Strike first.* / 盯准释放,先人一步。
 - 主域规划为 `drophawk.flaios.com`。
